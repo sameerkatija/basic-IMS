@@ -1,0 +1,27 @@
+<%- include('partials/header', {title: 'Low Stock Report', user: user}) %>
+<h1 class="bg-primary text-white text-center mb-0 pb-1">Inventory DashBoard</h1>
+<h2 class="bg-warning text-white text-center">Low Stock Report</h2>
+<div class="container mt-3">
+  <table class="table table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th>Product Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Category</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(product of products){ %>
+
+      <tr class="<%= product.quantity < 10 ? 'table-danger' : '' %>">
+        <td><%= product.name %></td>
+        <td><%= product.price %></td>
+        <td><%= product.category %></td>
+        <td><%= product.quantity %></td>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+</div>
+<%- include('partials/footer') %>
