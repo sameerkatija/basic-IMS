@@ -6,6 +6,8 @@ const cookieParser = require("cookie-parser");
 const app = express();
 app.set("view engine", "ejs");
 app.set("views", "./views");
+// Serve static files from the 'public' directory
+app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser("this is cookie password"));
@@ -23,7 +25,5 @@ mongoose
 app.use("/", router);
 
 app.listen(process.env.PORT, () => {
-  console.log(
-    `Server is listening on port http://localhost:${process.env.PORT}`
-  );
+  console.log(`Server is listening on port http://localhost:${process.env.PORT}`);
 });

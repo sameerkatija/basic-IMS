@@ -5,10 +5,10 @@ const imsRoutes = require("./ims");
 const User = require("../models/user");
 const Product = require("../models/product");
 router.get("/", async (req, res) => {
-  const user = await User.findOne({ email: req.signedCookies.user });
-  const products = await Product.find({});
+  // const user = await User.findOne({ email: req.signedCookies.user });
+  // const products = await Product.find({});
 
-  res.render("index", { user, productCount: products.length });
+  res.render("landing");
 });
 
 router.use("/ims", imsRoutes);
