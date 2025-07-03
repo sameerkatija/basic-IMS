@@ -147,7 +147,7 @@ main section a:hover {
     width: 85%;
   }
   main section h1 {
-    font-size: 32px;
+    font-size: 48px;
     margin: 20px 5px;
   }
   main section p {
@@ -169,6 +169,9 @@ main section a:hover {
   main {
     width: 80%;
   }
+  main section h1 {
+    font-size: 48px;
+  }
   main section a {
     padding: 20px 30px;
     margin: 20px 5px;
@@ -181,11 +184,17 @@ main section a:hover {
   main {
     width: 60%;
   }
+  main section h1 {
+    font-size: 48px;
+  }
 }
 
 @media (min-width: 1400px) {
   /* xxl */
   main {
     width: 50%;
+  }
+  main section h1 {
+    font-size: 48px;
   }
 }

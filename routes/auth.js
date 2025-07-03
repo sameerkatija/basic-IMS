@@ -30,7 +30,7 @@ router.post("/signin", async (req, res) => {
     const auth = user.comparePassword(password);
     if (!auth) return res.status(401).redirect("/auth/signin");
     res.cookie("user", user.email, { signed: true });
-    return res.redirect("/");
+    return res.redirect("/ims/inventory");
   } catch (e) {
     return res.redirect("/auth/signin");
   }
